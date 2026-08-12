@@ -35,3 +35,22 @@ print(
     f"{jarjestetyt_sanat[3]} ja "
     f"{jarjestetyt_sanat[4]}."
 )
+
+# osa 5
+merkkimaarat = {}
+for merkki in teksti:
+    if not merkki.isspace():
+        if merkki in merkkimaarat:
+            merkkimaarat[merkki] += 1
+        else:
+            merkkimaarat[merkki] = 1
+
+jarjestetyt_merkit = sorted(merkkimaarat, key=merkkimaarat.get, reverse=True)
+
+print(
+    f"Yleisimmät merkit ovat {jarjestetyt_merkit[0]}, "
+    f"{jarjestetyt_merkit[1]}, "
+    f"{jarjestetyt_merkit[2]}, "
+    f"{jarjestetyt_merkit[3]} ja "
+    f"{jarjestetyt_merkit[4]}."
+)
