@@ -11,3 +11,9 @@ while True:
 
 # 2 osa
 print(f"Tekstissä on {len(teksti)} merkkiä.")
+
+
+# 3 osa
+sanat = teksti.split()
+print(f"Tekstissä on {len(sanat)} sanaa.")
+
