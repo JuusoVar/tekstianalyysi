@@ -8,3 +8,6 @@ while True:
         break
     except FileNotFoundError:
         print("Tiedostoa ei löydy")
+
+# 2 osa
+print(f"Tekstissä on {len(teksti)} merkkiä.")
