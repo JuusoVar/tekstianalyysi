@@ -54,3 +54,28 @@ print(
     f"{jarjestetyt_merkit[3]} ja "
     f"{jarjestetyt_merkit[4]}."
 )
+
+# bonus
+suomi = ["on", "ja", "ei", "että", "oli", "myös", "kun", "sekä", "niin", "mutta"]
+ruotsi = ["är", "det", "som", "inte", "var", "på", "ett", "men"]
+englanti = ["and", "but", "the", "of", "it", "in", "was", "that", "but"]
+
+suomi_maara = 0
+ruotsi_maara = 0
+englanti_maara = 0
+
+for sana in sanat:
+    sana = sana.lower()
+    if sana in suomi:
+        suomi_maara += 1
+    if sana in ruotsi:
+        ruotsi_maara += 1
+    if sana in englanti:
+        englanti_maara += 1
+
+if suomi_maara > ruotsi_maara and suomi_maara > englanti_maara:
+    print("Teksti on todennäköisesti suomea.")
+elif ruotsi_maara > suomi_maara and ruotsi_maara > englanti_maara:
+    print("Teksti on todennäköisesti ruotsia.")
+elif englanti_maara > suomi_maara and englanti_maara > ruotsi_maara:
+    print("Teksti on todennäköisesti englantia.")
